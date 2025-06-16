@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pollito Tamagotchi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2> Cuida a tu Pollito</h2>
+
+  <div id="sprite">
+    <img id="pet-image" src="" alt="Etapa del pollito" />
+  </div>
+
+  <div id="stats">
+    <div class="stat">
+      <p> Hambre</p>
+      <div class="progress-bar"><div id="hunger-bar" class="bar"></div></div>
+    </div>
+
+    <div class="stat">
+      <p> Diversión</p>
+      <div class="progress-bar"><div id="fun-bar" class="bar"></div></div>
+    </div>
+
+    <div class="stat">
+      <p> Higiene</p>
+      <div class="progress-bar"><div id="hygiene-bar" class="bar"></div></div>
+    </div>
+
+    <p>Edad: <span id="age"></span></p>
+  </div>
+
+  <div id="poop-container"></div>
+  <p id="message"></p>
+
+  <div class="controls">
+    <button onclick="feed()"> Alimentar</button>
+    <button onclick="play()"> Jugar</button>
+    <button onclick="clean()"> Limpiar</button>
+    <button onclick="restartGame()"> Reiniciar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

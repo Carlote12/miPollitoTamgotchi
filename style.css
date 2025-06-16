@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  background: #f5cc9d; /* cremita oscuro */
+  text-align: center;
+  padding: 20px;
+}
+
+
+#sprite img {
+  width: 73px;
+  height: 73px;
+  margin: 10px auto;
+  display: block;
+}
+
+.poop {
+  display: inline-block;
+  font-size: 24px;
+  margin: 5px;
+}
+
+.dead {
+  font-size: 60px;
+  color: red;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.stat {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #sprite img {
+    width: 64px;
+    height: 64px;
+  }
+}
