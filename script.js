@@ -46,7 +46,7 @@ function updateUI(optionalMessage = "") {
 
   if (!alive) {
     petImage.src = "";
-    messageEl.textContent = '💀 ¡Tu pollito ha muerto!';
+    messageEl.textContent = ' ¡Tu pollito ha muerto!';
     return;
   }
 
@@ -158,4 +158,28 @@ function clean() {
 function restartGame() {
   localStorage.removeItem('pollitoTamagochi');
   startGame();
+}
+function updateUI(optionalMessage = "") {
+  hungerBar.style.width = `${hunger}%`;
+  funBar.style.width = `${fun}%`;
+  hygieneBar.style.width = `${hygiene}%`;
+  ageEl.textContent = Math.floor(age);
+  
+  if (!alive) {
+    petImage.src = "lapida.jpg"; // Muestra la imagen de la lápida cuando el pollito muere
+    messageEl.textContent = "¡Tu pollito ha muerto!";
+    return;
+  }
+
+  petImage.src = getImageForAge(age);
+
+  if (hunger < 30 || fun < 30 || hygiene < 30) {
+    messageEl.textContent = "¡Estoy triste!";
+  } else if (age >= 10) {
+    messageEl.textContent = "¡Ya soy una gallina!";
+  } else if (age >= 5) {
+    messageEl.textContent = "¡Estoy creciendo!";
+  } else {
+    messageEl.textContent = optionalMessage;
+  }
 }
